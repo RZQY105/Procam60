@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#88000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvStatusBadge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1080P • 60FPS LOCK • 28MBPS"
+            android:textColor="#00FF88"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switchStabilizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Stabilizer Cerdas "
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#AA000000"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/proControlsPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvIsoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ISO: Auto"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekIso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3200"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/tvShutterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shutter: Auto"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekShutter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/tvFocusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fokus: Auto"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekFocus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <Button
+                android:id="@+id/btnModeVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#FF3B30"
+                android:text="VIDEO 60FPS"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnModePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="#333333"
+                android:text="FOTO PRO"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF3B30"
+            android:text="REC"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>
